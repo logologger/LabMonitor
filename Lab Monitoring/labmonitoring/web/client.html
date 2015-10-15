@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>the title</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   
+</head>
+<body>
+   <p>Click on the button to load result.html file:</p>
+   <div id="stage" style="background-color:blue;">
+          STAGE
+   </div>
+   <input type="button" id="driver" value="Load Data" />
+   <textarea name="rajat" id="rajat"></textarea>
+</body>
+
+<script type="text/javascript" language="javascript">
+      
+    
+      $("#rajat").on("keyup", function(e)
+      {
+         
+        $.post("getAnswer.jsp",
+        {
+            
+            rajat: e.target.value
+        }
+    );
+     
+    });
+
+
+   </script>
+</html>
